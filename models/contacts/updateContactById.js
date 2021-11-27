@@ -1,5 +1,4 @@
-const { getAllContacts } = require('./methods')
-const { updateContacts } = require('./methods')
+const { getAllContacts, updateContacts } = require('./methods')
 
 const updateContactById = async (contactId, body) => {
   const contacts = await getAllContacts()
