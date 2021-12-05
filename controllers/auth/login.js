@@ -10,15 +10,7 @@ const login = async(req, res) => {
   if (!user || !user.comparePassword(password)) {
     throw new BadRequest('Email or password is wrong')
   }
-  //   const { NotFound, Unauthorized } = require('http-errors')
-  //   const bcrypt = require('bcryptjs')
-  //   if (!user) {
-  //     throw new NotFound(`User with email: ${email} not found`)
-  //   }
-  //   const compareResult = bcrypt.compareSync(password, user.password)
-  //   if (!compareResult) {
-  //     throw new Unauthorized('Password is wrong')
-  //   }
+
   const payload = {
     id: user._id
   }

@@ -11,10 +11,6 @@ const register = async(req, res) => {
   newUser.setPassword(password)
   await newUser.save()
 
-  //   const bcrypt = require('bcryptjs')
-  //   const hashPassword = bcrypt.hashSync(password, bcrypt.genSaltSync(10))
-  //   await User.create({ email, password: hashPassword })
-
   res.status(201).json({
     status: 'Created',
     code: 201,
