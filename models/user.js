@@ -21,6 +21,16 @@ const userSchema = Schema({
     type: String,
     default: null,
   },
+  avatarURL: {
+    type: String,
+  },
+  verify: {
+    type: Boolean,
+    default: false,
+  },
+  verificationToken: {
+    type: String,
+  },
 }, { versionKey: false, timestamps: true })
 
 userSchema.methods.setPassword = function(password) {
